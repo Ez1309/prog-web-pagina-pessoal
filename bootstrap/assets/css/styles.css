@@ -1,0 +1,83 @@
+/* =========================================
+   SOBRESCRITA DA PALETA BOOTSTRAP 5
+========================================= */
+
+/* MODO CLARO (Soft Pastel Mint & Lavender) */
+:root, [data-bs-theme="light"] {
+    --bs-body-bg: #F8F9FA;
+    --bs-body-color: #212529;
+    --bs-secondary-color: #6C757D;
+    
+    /* Fundos Secundários (ex: Cards) */
+    --bs-tertiary-bg: #F1F3F9; 
+    
+    /* Acentos Primários e Secundários */
+    --bs-primary: #A8E6CF;
+    --bs-primary-rgb: 168, 230, 207;
+    --bs-secondary: #DED2F9;
+    --bs-secondary-rgb: 222, 210, 249;
+
+    --bs-border-color: rgba(33, 37, 41, 0.1);
+}
+
+/* MODO ESCURO (Cyber Pastel Deep Slate) */
+[data-bs-theme="dark"] {
+    --bs-body-bg: #12161A;
+    --bs-body-color: #E9ECEF;
+    --bs-secondary-color: #ADB5BD;
+    
+    /* Fundos Secundários (ex: Cards) */
+    --bs-tertiary-bg: #1A2026; 
+    
+    /* Acentos Primários e Secundários (Mais brilhantes) */
+    --bs-primary: #BFF2E2;
+    --bs-primary-rgb: 191, 242, 226;
+    --bs-secondary: #E8DFF5;
+    --bs-secondary-rgb: 232, 223, 245;
+
+    --bs-border-color: rgba(233, 236, 239, 0.1);
+}
+
+/* =========================================
+   ESTILOS GERAIS
+========================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Compensar a altura da navbar fixa ao clicar num link âncora */
+section {
+    scroll-margin-top: 85px;
+}
+
+/* =========================================
+   COMPONENTES CUSTOMIZADOS
+========================================= */
+
+/* Botão de trocar o tema */
+.btn-theme-toggle {
+    background-color: var(--bs-tertiary-bg);
+    color: var(--bs-body-color);
+    border: 1px solid var(--bs-border-color);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.btn-theme-toggle:hover {
+    background-color: var(--bs-primary);
+    color: #12161A; /* Garante que o ícone fique escuro/legível no hover mint */
+}
+
+/* Garantir que textos em botões primários fiquem escuros para dar contraste com o Mint pastel */
+.btn-primary, .badge.text-bg-primary {
+    color: #12161A !important;
+    font-weight: 500;
+}
+.badge.text-bg-secondary {
+    color: #12161A !important;
+}
