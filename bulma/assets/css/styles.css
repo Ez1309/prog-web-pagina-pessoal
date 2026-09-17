@@ -1,15 +1,10 @@
-/* =========================================
-   PALETA DE CORES (Idêntica ao Bootstrap)
-========================================= */
-
 :root, html[data-theme="light"] {
     --bg-primary: #F8F9FA;
     --bg-card: #F1F3F9;
     --text-main: #212529;
     --text-muted: #6C757D;
-    
-    --color-primary: #358F70; /* Verde escuro */
-    --color-secondary: #7452A2; /* Lilás escuro */
+    --color-primary: #358F70;
+    --color-secondary: #7452A2;
     --custom-btn-text: #FFFFFF;
     --border-color: rgba(33, 37, 41, 0.1);
 }
@@ -19,16 +14,12 @@ html[data-theme="dark"] {
     --bg-card: #1A2026;
     --text-main: #E9ECEF;
     --text-muted: #ADB5BD;
-    
-    --color-primary: #BFF2E2; /* Verde claro */
-    --color-secondary: #E8DFF5; /* Lilás claro */
+    --color-primary: #BFF2E2;
+    --color-secondary: #E8DFF5;
     --custom-btn-text: #12161A;
     --border-color: rgba(233, 236, 239, 0.1);
 }
 
-/* =========================================
-   SOBRESCRITA GERAL
-========================================= */
 html {
     scroll-behavior: smooth;
     background-color: var(--bg-primary);
@@ -43,36 +34,48 @@ body {
     color: var(--text-main);
 }
 
-.text-muted { color: var(--text-muted) !important; }
-.text-primary { color: var(--color-primary) !important; }
-.text-secondary { color: var(--color-secondary) !important; }
+.text-muted {
+    color: var(--text-muted) !important;
+}
 
-/* NAVBAR */
+.text-primary {
+    color: var(--color-primary) !important;
+}
+
+.text-secondary {
+    color: var(--color-secondary) !important;
+}
+
 .custom-navbar {
     background-color: var(--bg-primary);
     border-bottom: 1px solid var(--border-color);
 }
+
 .navbar-item, .navbar-link {
     color: var(--text-main);
 }
+
 .navbar-item:hover {
     color: var(--color-primary) !important;
     background-color: transparent !important;
 }
 
-/* BOTOES E TAGS CUSTOMIZADOS */
 .custom-btn-primary {
     background-color: var(--color-primary) !important;
     border-color: var(--color-primary) !important;
     color: var(--custom-btn-text) !important;
 }
-.custom-btn-primary:hover { opacity: 0.85; }
+
+.custom-btn-primary:hover {
+    opacity: 0.85;
+}
 
 .custom-btn-outline {
     background-color: transparent !important;
     border-color: var(--color-secondary) !important;
     color: var(--color-secondary) !important;
 }
+
 .custom-btn-outline:hover {
     background-color: var(--color-secondary) !important;
     color: var(--custom-btn-text) !important;
@@ -88,14 +91,12 @@ body {
     border-color: var(--border-color) !important;
     color: var(--text-main) !important;
 }
+
 .btn-theme-toggle:hover {
     background-color: var(--color-primary) !important;
     color: var(--custom-btn-text) !important;
 }
 
-/* =========================================
-   ESTILOS ESPECÍFICOS (HERO E IMAGEM)
-========================================= */
 .border-bottom {
     border-bottom: 1px solid var(--border-color);
 }
@@ -117,6 +118,7 @@ body {
     width: 100%;
     transition: transform 0.3s ease;
 }
+
 .hero-img:hover {
     transform: translateY(-5px);
 }
@@ -139,11 +141,6 @@ body {
     }
 }
 
-/* =========================================
-   COMPONENTS (CARDS, BADGES E HELPERS)
-========================================= */
-
-/* Caixa (Substituto do Card do Bootstrap) */
 .custom-box {
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -164,24 +161,21 @@ body {
     height: 100%;
 }
 
-/* =========================================
-   EXPERIÊNCIA (Bordas laterais)
-========================================= */
-
 .border-left-green {
     border-left: 4px solid var(--color-primary);
 }
-.text-green { color: var(--color-primary) !important; }
+
+.text-green {
+    color: var(--color-primary) !important;
+}
 
 .border-left-purple {
     border-left: 4px solid var(--color-secondary);
 }
-.text-purple { color: var(--color-secondary) !important; }
 
-
-/* =========================================
-   HABILIDADES E PROJETOS (Animações)
-========================================= */
+.text-purple {
+    color: var(--color-secondary) !important;
+}
 
 .tech-card, .project-card {
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
@@ -202,10 +196,6 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1) !important;
 }
-
-/* =========================================
-   FOOTER
-========================================= */
 
 .custom-footer {
     background-color: var(--bg-card);

@@ -4,34 +4,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Pessoal | Meu Portfólio (Bulma)</title>
-
-    <!-- Bulma CSS (Versão mais recente) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-    
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
-    <!-- CSS Customizado -->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-
-    <!-- Navbar -->
     <nav class="navbar is-fixed-top custom-navbar" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
                 <a class="navbar-item has-text-weight-bold is-size-5" href="#top">
                     <i class="fa-solid fa-terminal text-primary mr-2"></i>Meu Portfólio
                 </a>
-
-                <!-- Hamburger menu (Mobile) -->
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                 </a>
             </div>
-
             <div id="navMenu" class="navbar-menu has-text-weight-medium">
                 <div class="navbar-end">
                     <a class="navbar-item" href="#sobre">Sobre</a>
@@ -39,7 +28,6 @@
                     <a class="navbar-item" href="#habilidades">Habilidades</a>
                     <a class="navbar-item" href="#projetos">Projetos</a>
                     <a class="navbar-item" href="#contato">Contato</a>
-                    
                     <div class="navbar-item">
                         <button id="themeToggle" class="button is-rounded btn-theme-toggle" aria-label="Alternar tema">
                             <i class="fa-solid fa-moon"></i>
@@ -50,22 +38,15 @@
         </div>
     </nav>
 
-    <!-- Conteúdo Principal -->
     <main id="top" class="container is-max-widescreen mt-6 pt-5">
-        
-        <!-- Hero / Sobre -->
         <section id="sobre" class="section border-bottom">
             <div class="columns is-vcentered is-flex-direction-row-reverse">
-                
-                <!-- Coluna da Foto (Direita no PC, Cima no Mobile) -->
                 <div class="column is-5 has-text-centered">
                     <div class="hero-image-wrapper mx-auto">
                         <img src="assets/img/foto.png" alt="Foto de perfil de Ezequiel" class="hero-img shadow-lg">
                         <div class="hero-decoration"></div>
                     </div>
                 </div>
-
-                <!-- Coluna de Texto -->
                 <div class="column is-7">
                     <span class="tag custom-tag-secondary is-rounded mb-4 is-medium">Sistemas de Informação • UFLA</span>
                     <h1 class="title is-1 mb-4">
@@ -77,7 +58,6 @@
                     <p class="mb-5 is-size-6 text-muted">
                         Atualmente estou no 5° período do curso de Sistemas de Informação na UFLA. Foco meus estudos em habilidades para construir uma carreira em desenvolvimento web. Gosto de criar soluções, resolver problemas, e usar a programação para transformar ideias em realidade.
                     </p>
-                    
                     <div class="buttons mt-4">
                         <a href="#experiencia" class="button custom-btn-primary is-medium">
                             <i class="fa-solid fa-briefcase mr-2"></i>Minha Trajetória
@@ -87,19 +67,15 @@
                         </a>
                     </div>
                 </div>
-
             </div>
         </section>
 
-        <!-- Experiência Profissional -->
         <section id="experiencia" class="section border-bottom">
             <div class="mb-5">
                 <h2 class="title is-4 mb-2"><i class="fa-solid fa-briefcase text-primary mr-2"></i>Trajetória Profissional</h2>
                 <p class="subtitle is-6 text-muted">Minhas experiências e onde já atuei.</p>
             </div>
-            
             <div class="columns is-multiline">
-                <!-- Emprego Atual -->
                 <div class="column is-12">
                     <div class="custom-box border-left-green">
                         <div class="is-flex is-flex-direction-column-mobile is-justify-content-space-between is-align-items-center-tablet mb-3">
@@ -114,8 +90,6 @@
                         </p>
                     </div>
                 </div>
-
-                <!-- Empresa Júnior -->
                 <div class="column is-12">
                     <div class="custom-box border-left-purple">
                         <div class="is-flex is-flex-direction-column-mobile is-justify-content-space-between is-align-items-center-tablet mb-3">
@@ -133,50 +107,42 @@
             </div>
         </section>
 
-        <!-- Habilidades (Stack) -->
         <section id="habilidades" class="section border-bottom">
             <div class="has-text-centered mb-6">
                 <h2 class="title is-4 mb-2">Tecnologias & Ferramentas</h2>
                 <p class="subtitle is-6 text-muted">O que eu utilizo no meu dia a dia.</p>
             </div>
-            
             <div class="columns is-mobile is-multiline has-text-centered">
-                <!-- Java -->
                 <div class="column is-6-mobile is-4-tablet is-2-desktop">
                     <div class="custom-box tech-card p-5">
                         <i class="fa-brands fa-java fa-3x text-secondary mb-4 tech-icon"></i>
                         <span class="is-block has-text-weight-semibold tech-name">Java</span>
                     </div>
                 </div>
-                <!-- Spring Boot -->
                 <div class="column is-6-mobile is-4-tablet is-2-desktop">
                     <div class="custom-box tech-card p-5">
                         <i class="fa-solid fa-leaf fa-3x text-secondary mb-4 tech-icon"></i>
                         <span class="is-block has-text-weight-semibold tech-name">Spring Boot</span>
                     </div>
                 </div>
-                <!-- Python -->
                 <div class="column is-6-mobile is-4-tablet is-2-desktop">
                     <div class="custom-box tech-card p-5">
                         <i class="fa-brands fa-python fa-3x text-secondary mb-4 tech-icon"></i>
                         <span class="is-block has-text-weight-semibold tech-name">Python</span>
                     </div>
                 </div>
-                <!-- PostgreSQL -->
                 <div class="column is-6-mobile is-4-tablet is-2-desktop">
                     <div class="custom-box tech-card p-5">
                         <i class="fa-solid fa-database fa-3x text-secondary mb-4 tech-icon"></i>
                         <span class="is-block has-text-weight-semibold tech-name">PostgreSQL</span>
                     </div>
                 </div>
-                <!-- Docker -->
                 <div class="column is-6-mobile is-4-tablet is-2-desktop">
                     <div class="custom-box tech-card p-5">
                         <i class="fa-brands fa-docker fa-3x text-secondary mb-4 tech-icon"></i>
                         <span class="is-block has-text-weight-semibold tech-name">Docker</span>
                     </div>
                 </div>
-                <!-- Git -->
                 <div class="column is-6-mobile is-4-tablet is-2-desktop">
                     <div class="custom-box tech-card p-5">
                         <i class="fa-brands fa-git-alt fa-3x text-secondary mb-4 tech-icon"></i>
@@ -186,15 +152,12 @@
             </div>
         </section>
 
-        <!-- Projetos -->
         <section id="projetos" class="section">
             <div class="mb-5">
                 <h2 class="title is-4 mb-2"><i class="fa-solid fa-code text-primary mr-2"></i>Projetos em Destaque</h2>
                 <p class="subtitle is-6 text-muted">Algumas aplicações práticas que desenvolvi.</p>
             </div>
-            
             <div class="columns is-multiline">
-                <!-- Projeto 1 -->
                 <div class="column is-12-mobile is-6-tablet is-4-desktop">
                     <div class="custom-box project-card is-flex is-flex-direction-column h-100">
                         <h3 class="title is-5 mb-3">Conversor de XLSX/CSV para DB</h3>
@@ -211,8 +174,6 @@
                         </a>
                     </div>
                 </div>
-
-                <!-- Projeto 2 -->
                 <div class="column is-12-mobile is-6-tablet is-4-desktop">
                     <div class="custom-box project-card is-flex is-flex-direction-column h-100">
                         <h3 class="title is-5 mb-3">Descarte de Lixo Eletrônico</h3>
@@ -229,8 +190,6 @@
                         </a>
                     </div>
                 </div>
-
-                <!-- Projeto 3 -->
                 <div class="column is-12-mobile is-6-tablet is-4-desktop">
                     <div class="custom-box project-card is-flex is-flex-direction-column h-100">
                         <h3 class="title is-5 mb-3">Redação Inteligente</h3>
@@ -249,10 +208,8 @@
                 </div>
             </div>
         </section>
-
     </main>
 
-    <!-- Footer Robusto -->
     <footer id="contato" class="custom-footer border-top py-6 mt-6">
         <div class="container is-max-widescreen px-3">
             <div class="columns is-vcentered">
@@ -274,19 +231,14 @@
                     </div>
                 </div>
             </div>
-            
             <hr class="custom-hr my-5">
-            
             <div class="is-flex is-flex-direction-column is-flex-direction-row-tablet is-justify-content-space-between is-align-items-center text-muted is-size-7">
                 <p class="mb-2-mobile">© 2026 Ezequiel Dominguez Santos. Desenvolvido para GAC116 (UFLA).</p>
                 <p class="has-text-weight-medium">Versão: <i class="fa-brands fa-css3-alt text-primary mx-1"></i>Bulma CSS</p>
             </div>
         </div>
     </footer>
-        
-    </main>
 
-    <!-- JS Customizado -->
     <script src="assets/js/script.js"></script>
 </body>
 </html>

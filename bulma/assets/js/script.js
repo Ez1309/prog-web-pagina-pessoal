@@ -1,24 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-    // 1. LÓGICA DO MENU MOBILE (BULMA)
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    
     if ($navbarBurgers.length > 0) {
-        $navbarBurgers.forEach( el => {
+        $navbarBurgers.forEach(el => {
             el.addEventListener('click', () => {
                 const target = el.dataset.target;
                 const $target = document.getElementById(target);
+                
                 el.classList.toggle('is-active');
                 $target.classList.toggle('is-active');
                 
-                // Arrumar cor de fundo do menu no mobile
-                if($target.classList.contains('is-active')){
+                if ($target.classList.contains('is-active')) {
                     $target.style.backgroundColor = 'var(--bg-primary)';
                 }
             });
         });
     }
 
-    // 2. LÓGICA DO TEMA (DARK/LIGHT)
     const htmlElement = document.documentElement;
     const themeBtn = document.getElementById("themeToggle");
 
@@ -36,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const savedTheme = localStorage.getItem("portfolio-theme-bulma");
+    
     if (savedTheme) {
         applyTheme(savedTheme);
     } else {
@@ -49,5 +48,4 @@ document.addEventListener('DOMContentLoaded', () => {
             applyTheme(currentTheme === "light" ? "dark" : "light");
         });
     }
-
 });

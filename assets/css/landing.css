@@ -1,115 +1,115 @@
 :root {
-  --bg-primary: #F8F9FA;
-  --bg-card: #F1F3F9;
-  --text-primary: #212529;
-  --text-muted: #6C757D;
-  --mint: #A8E6CF;
-  --lilac: #DED2F9;
+    --bg-primary: #F8F9FA;
+    --bg-card: #F1F3F9;
+    --text-primary: #212529;
+    --text-muted: #6C757D;
+    --mint: #A8E6CF;
+    --lilac: #DED2F9;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --bg-primary: #12161A;
-    --bg-card: #1A2026;
-    --text-primary: #E9ECEF;
-    --text-muted: #ADB5BD;
-    --mint: #BFF2E2;
-    --lilac: #E8DFF5;
-  }
+    :root {
+        --bg-primary: #12161A;
+        --bg-card: #1A2026;
+        --text-primary: #E9ECEF;
+        --text-muted: #ADB5BD;
+        --mint: #BFF2E2;
+        --lilac: #E8DFF5;
+    }
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 body {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
 }
 
 .container {
-  max-width: 820px;
-  width: 100%;
-  text-align: center;
+    max-width: 820px;
+    width: 100%;
+    text-align: center;
 }
 
 .badge {
-  display: inline-block;
-  padding: 0.35rem 0.8rem;
-  background: var(--lilac);
-  color: #12161A;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
+    display: inline-block;
+    padding: 0.35rem 0.8rem;
+    background: var(--lilac);
+    color: #12161A;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
 
 h1 {
-  font-size: 2.2rem;
-  margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
 }
 
 .header p {
-  color: var(--text-muted);
-  margin-bottom: 2.5rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
 }
 
 .cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
 }
 
 .framework-card {
-  background: var(--bg-card);
-  padding: 2rem;
-  border-radius: 16px;
-  text-decoration: none;
-  color: inherit;
-  border: 1px solid rgba(128, 128, 128, 0.2);
-  transition: transform 0.2s ease, border-color 0.2s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 16px;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .framework-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--mint);
+    transform: translateY(-4px);
+    border-color: var(--mint);
 }
 
 .framework-card h2 {
-  font-size: 1.4rem;
-  margin-bottom: 0.75rem;
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
 }
 
 .framework-card p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
 }
 
 .btn {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background: var(--mint);
-  color: #12161A;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 0.9rem;
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: var(--mint);
+    color: #12161A;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
 }
 
 footer {
-  color: var(--text-muted);
-  font-size: 0.85rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
 }
