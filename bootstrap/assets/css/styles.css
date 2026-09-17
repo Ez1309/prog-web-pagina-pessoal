@@ -81,3 +81,54 @@ section {
 .badge.text-bg-secondary {
     color: #12161A !important;
 }
+
+/* =========================================
+   HERO SECTION (SOBRE)
+========================================= */
+
+.hero-section {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    max-width: 350px;
+    z-index: 1;
+}
+
+/* A foto em si */
+.hero-img {
+    position: relative;
+    z-index: 2;
+    border: 4px solid var(--bs-body-bg);
+    transition: transform 0.3s ease;
+}
+
+.hero-img:hover {
+    transform: translateY(-5px);
+}
+
+/* Quadrado decorativo que fica atrás da foto usando a cor Secondary (Lilás Pastel) */
+.hero-decoration {
+    position: absolute;
+    top: 20px;
+    right: -20px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.5;
+}
+
+/* Ajuste para mobile: no celular não deslocamos tanto a decoração para não estourar a tela */
+@media (max-width: 991.98px) {
+    .hero-section {
+        min-height: auto;
+        padding-top: 2rem;
+    }
+    .hero-decoration {
+        right: -10px;
+        top: 10px;
+    }
+}
