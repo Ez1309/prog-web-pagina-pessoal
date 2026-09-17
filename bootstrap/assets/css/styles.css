@@ -232,3 +232,45 @@ section {
     color: var(--custom-btn-text) !important;
     transform: translateY(-3px);
 }
+
+/* =========================================
+   UTILITÁRIOS DE CORES CUSTOMIZADAS
+========================================= */
+
+/* Verde (Baseado na nossa variável Primary) */
+.border-green { border-color: var(--bs-primary) !important; }
+.text-green { color: var(--bs-primary) !important; }
+
+/* Roxo (Baseado na nossa variável Secondary) */
+.border-purple { border-color: var(--bs-secondary) !important; }
+.text-purple { color: var(--bs-secondary) !important; }
+
+/* A foto em si - Transformando em Círculo com CSS */
+.hero-img {
+    position: relative;
+    z-index: 2;
+    border: 4px solid var(--bs-body-bg);
+    border-radius: 50%; /* Deixa a borda redonda */
+    aspect-ratio: 1 / 1; /* Força a imagem a ter proporção quadrada (1:1) */
+    object-fit: cover; /* Corta o excesso da foto sem amassar o seu rosto */
+    width: 100%;
+    max-width: 320px; /* Limita o tamanho máximo */
+    transition: transform 0.3s ease;
+}
+
+.hero-img:hover {
+    transform: translateY(-5px);
+}
+
+/* O fundo decorativo também vira um círculo para acompanhar */
+.hero-decoration {
+    position: absolute;
+    top: 15px; /* Ajustei um pouco a distância */
+    right: -15px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Deixa redondo igual a foto */
+    z-index: 0;
+    opacity: 0.7;
+    background-color: var(--bs-secondary);
+}
