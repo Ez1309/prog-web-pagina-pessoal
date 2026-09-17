@@ -2,7 +2,7 @@
    SOBRESCRITA DA PALETA BOOTSTRAP 5
 ========================================= */
 
-/* MODO CLARO (Soft Pastel Mint & Lavender) */
+/* MODO CLARO (Deep Mint & Deep Lilac para dar contraste) */
 :root, [data-bs-theme="light"] {
     --bs-body-bg: #F8F9FA;
     --bs-body-color: #212529;
@@ -11,16 +11,17 @@
     /* Fundos Secundários (ex: Cards) */
     --bs-tertiary-bg: #F1F3F9; 
     
-    /* Acentos Primários e Secundários */
-    --bs-primary: #A8E6CF;
-    --bs-primary-rgb: 168, 230, 207;
-    --bs-secondary: #DED2F9;
-    --bs-secondary-rgb: 222, 210, 249;
+    /* Acentos Primários e Secundários (Mais fechados/escuros para o modo claro) */
+    --bs-primary: #358F70; /* Verde/Mint mais profundo */
+    --bs-secondary: #7452A2; /* Lilás mais escuro */
+
+    /* Cor do texto em cima dos botões e badges */
+    --custom-btn-text: #FFFFFF;
 
     --bs-border-color: rgba(33, 37, 41, 0.1);
 }
 
-/* MODO ESCURO (Cyber Pastel Deep Slate) */
+/* MODO ESCURO (Cyber Pastel) */
 [data-bs-theme="dark"] {
     --bs-body-bg: #12161A;
     --bs-body-color: #E9ECEF;
@@ -29,13 +30,63 @@
     /* Fundos Secundários (ex: Cards) */
     --bs-tertiary-bg: #1A2026; 
     
-    /* Acentos Primários e Secundários (Mais brilhantes) */
-    --bs-primary: #BFF2E2;
-    --bs-primary-rgb: 191, 242, 226;
+    /* Acentos Pasteis Brilhantes para o escuro */
+    --bs-primary: #BFF2E2; 
     --bs-secondary: #E8DFF5;
-    --bs-secondary-rgb: 232, 223, 245;
+
+    /* Cor do texto em cima dos botões e badges no escuro */
+    --custom-btn-text: #12161A;
 
     --bs-border-color: rgba(233, 236, 239, 0.1);
+}
+
+/* =========================================
+   FORÇANDO CORES NOS COMPONENTES BOOTSTRAP
+========================================= */
+
+/* Botões Primários */
+.btn-primary {
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+    color: var(--custom-btn-text) !important;
+}
+.btn-primary:hover {
+    opacity: 0.85;
+}
+
+/* Botões Outline Primários */
+.btn-outline-primary {
+    color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+}
+.btn-outline-primary:hover {
+    background-color: var(--bs-primary) !important;
+    color: var(--custom-btn-text) !important;
+}
+
+/* Botões Outline Secundários */
+.btn-outline-secondary {
+    color: var(--bs-secondary) !important;
+    border-color: var(--bs-secondary) !important;
+}
+.btn-outline-secondary:hover {
+    background-color: var(--bs-secondary) !important;
+    color: var(--custom-btn-text) !important;
+}
+
+/* Badges */
+.badge.text-bg-primary {
+    background-color: var(--bs-primary) !important;
+    color: var(--custom-btn-text) !important;
+}
+.badge.text-bg-secondary {
+    background-color: var(--bs-secondary) !important;
+    color: var(--custom-btn-text) !important;
+}
+
+/* Letras de links soltos */
+.text-primary {
+    color: var(--bs-primary) !important;
 }
 
 /* =========================================
@@ -46,16 +97,11 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Compensar a altura da navbar fixa ao clicar num link âncora */
 section {
     scroll-margin-top: 85px;
 }
 
-/* =========================================
-   COMPONENTES CUSTOMIZADOS
-========================================= */
-
-/* Botão de trocar o tema */
+/* Botão de trocar o tema na Navbar */
 .btn-theme-toggle {
     background-color: var(--bs-tertiary-bg);
     color: var(--bs-body-color);
@@ -70,17 +116,9 @@ section {
 
 .btn-theme-toggle:hover {
     background-color: var(--bs-primary);
-    color: #12161A; /* Garante que o ícone fique escuro/legível no hover mint */
+    color: var(--custom-btn-text);
 }
 
-/* Garantir que textos em botões primários fiquem escuros para dar contraste com o Mint pastel */
-.btn-primary, .badge.text-bg-primary {
-    color: #12161A !important;
-    font-weight: 500;
-}
-.badge.text-bg-secondary {
-    color: #12161A !important;
-}
 
 /* =========================================
    HERO SECTION (SOBRE)
@@ -98,7 +136,6 @@ section {
     z-index: 1;
 }
 
-/* A foto em si */
 .hero-img {
     position: relative;
     z-index: 2;
@@ -110,7 +147,6 @@ section {
     transform: translateY(-5px);
 }
 
-/* Quadrado decorativo que fica atrás da foto usando a cor Secondary (Lilás Pastel) */
 .hero-decoration {
     position: absolute;
     top: 20px;
@@ -118,10 +154,10 @@ section {
     width: 100%;
     height: 100%;
     z-index: 0;
-    opacity: 0.5;
+    opacity: 0.7;
+    background-color: var(--bs-secondary); /* Usa a cor secundária */
 }
 
-/* Ajuste para mobile: no celular não deslocamos tanto a decoração para não estourar a tela */
 @media (max-width: 991.98px) {
     .hero-section {
         min-height: auto;
@@ -137,18 +173,15 @@ section {
    EXPERIÊNCIA E HABILIDADES
 ========================================= */
 
-/* Fundo padronizado para os cards independentemente do modo de cor */
 .bg-custom-card {
     background-color: var(--bs-tertiary-bg);
     border: 1px solid var(--bs-border-color);
 }
 
-/* Ajustes da borda esquerda colorida para a timeline de experiências */
 .border-4 {
     border-width: 4px !important;
 }
 
-/* Efeitos nos Cards das Stacks (Habilidades) */
 .tech-card {
     transition: transform 0.3s ease, background-color 0.3s ease;
     cursor: default;
@@ -160,8 +193,42 @@ section {
     border-color: var(--bs-primary);
 }
 
-/* Quando passa o mouse no card da tech, a cor do ícone e do texto mudam para escuro para dar contraste com a cor primária */
 .tech-card:hover .tech-icon,
 .tech-card:hover .tech-name {
-    color: #12161A !important;
+    color: var(--custom-btn-text) !important;
+}
+
+/* =========================================
+   PROJETOS
+========================================= */
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+}
+
+/* =========================================
+   FOOTER (CONTATO)
+========================================= */
+
+.footer-btn {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+    color: var(--bs-secondary-color);
+}
+
+.footer-btn:hover {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    color: var(--custom-btn-text) !important;
+    transform: translateY(-3px);
 }
