@@ -132,3 +132,36 @@ section {
         top: 10px;
     }
 }
+
+/* =========================================
+   EXPERIÊNCIA E HABILIDADES
+========================================= */
+
+/* Fundo padronizado para os cards independentemente do modo de cor */
+.bg-custom-card {
+    background-color: var(--bs-tertiary-bg);
+    border: 1px solid var(--bs-border-color);
+}
+
+/* Ajustes da borda esquerda colorida para a timeline de experiências */
+.border-4 {
+    border-width: 4px !important;
+}
+
+/* Efeitos nos Cards das Stacks (Habilidades) */
+.tech-card {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: default;
+}
+
+.tech-card:hover {
+    transform: translateY(-8px);
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+/* Quando passa o mouse no card da tech, a cor do ícone e do texto mudam para escuro para dar contraste com a cor primária */
+.tech-card:hover .tech-icon,
+.tech-card:hover .tech-name {
+    color: #12161A !important;
+}
