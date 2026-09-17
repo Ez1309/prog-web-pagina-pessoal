@@ -1,97 +1,24 @@
-/* =========================================
-   SOBRESCRITA DA PALETA BOOTSTRAP 5
-========================================= */
-
-/* MODO CLARO (Deep Mint & Deep Lilac para dar contraste) */
 :root, [data-bs-theme="light"] {
     --bs-body-bg: #F8F9FA;
     --bs-body-color: #212529;
     --bs-secondary-color: #6C757D;
-    
-    /* Fundos Secundários (ex: Cards) */
     --bs-tertiary-bg: #F1F3F9; 
-    
-    /* Acentos Primários e Secundários (Mais fechados/escuros para o modo claro) */
-    --bs-primary: #358F70; /* Verde/Mint mais profundo */
-    --bs-secondary: #7452A2; /* Lilás mais escuro */
-
-    /* Cor do texto em cima dos botões e badges */
+    --bs-primary: #358F70;
+    --bs-secondary: #7452A2;
     --custom-btn-text: #FFFFFF;
-
     --bs-border-color: rgba(33, 37, 41, 0.1);
 }
 
-/* MODO ESCURO (Cyber Pastel) */
 [data-bs-theme="dark"] {
     --bs-body-bg: #12161A;
     --bs-body-color: #E9ECEF;
     --bs-secondary-color: #ADB5BD;
-    
-    /* Fundos Secundários (ex: Cards) */
     --bs-tertiary-bg: #1A2026; 
-    
-    /* Acentos Pasteis Brilhantes para o escuro */
     --bs-primary: #BFF2E2; 
     --bs-secondary: #E8DFF5;
-
-    /* Cor do texto em cima dos botões e badges no escuro */
     --custom-btn-text: #12161A;
-
     --bs-border-color: rgba(233, 236, 239, 0.1);
 }
-
-/* =========================================
-   FORÇANDO CORES NOS COMPONENTES BOOTSTRAP
-========================================= */
-
-/* Botões Primários */
-.btn-primary {
-    background-color: var(--bs-primary) !important;
-    border-color: var(--bs-primary) !important;
-    color: var(--custom-btn-text) !important;
-}
-.btn-primary:hover {
-    opacity: 0.85;
-}
-
-/* Botões Outline Primários */
-.btn-outline-primary {
-    color: var(--bs-primary) !important;
-    border-color: var(--bs-primary) !important;
-}
-.btn-outline-primary:hover {
-    background-color: var(--bs-primary) !important;
-    color: var(--custom-btn-text) !important;
-}
-
-/* Botões Outline Secundários */
-.btn-outline-secondary {
-    color: var(--bs-secondary) !important;
-    border-color: var(--bs-secondary) !important;
-}
-.btn-outline-secondary:hover {
-    background-color: var(--bs-secondary) !important;
-    color: var(--custom-btn-text) !important;
-}
-
-/* Badges */
-.badge.text-bg-primary {
-    background-color: var(--bs-primary) !important;
-    color: var(--custom-btn-text) !important;
-}
-.badge.text-bg-secondary {
-    background-color: var(--bs-secondary) !important;
-    color: var(--custom-btn-text) !important;
-}
-
-/* Letras de links soltos */
-.text-primary {
-    color: var(--bs-primary) !important;
-}
-
-/* =========================================
-   ESTILOS GERAIS
-========================================= */
 
 html {
     scroll-behavior: smooth;
@@ -101,7 +28,50 @@ section {
     scroll-margin-top: 85px;
 }
 
-/* Botão de trocar o tema na Navbar */
+.btn-primary {
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+    color: var(--custom-btn-text) !important;
+}
+
+.btn-primary:hover {
+    opacity: 0.85;
+}
+
+.btn-outline-primary {
+    color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--bs-primary) !important;
+    color: var(--custom-btn-text) !important;
+}
+
+.btn-outline-secondary {
+    color: var(--bs-secondary) !important;
+    border-color: var(--bs-secondary) !important;
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--bs-secondary) !important;
+    color: var(--custom-btn-text) !important;
+}
+
+.badge.text-bg-primary {
+    background-color: var(--bs-primary) !important;
+    color: var(--custom-btn-text) !important;
+}
+
+.badge.text-bg-secondary {
+    background-color: var(--bs-secondary) !important;
+    color: var(--custom-btn-text) !important;
+}
+
+.text-primary {
+    color: var(--bs-primary) !important;
+}
+
 .btn-theme-toggle {
     background-color: var(--bs-tertiary-bg);
     color: var(--bs-body-color);
@@ -119,11 +89,6 @@ section {
     color: var(--custom-btn-text);
 }
 
-
-/* =========================================
-   HERO SECTION (SOBRE)
-========================================= */
-
 .hero-section {
     min-height: 70vh;
     display: flex;
@@ -140,6 +105,11 @@ section {
     position: relative;
     z-index: 2;
     border: 4px solid var(--bs-body-bg);
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 100%;
+    max-width: 320px;
     transition: transform 0.3s ease;
 }
 
@@ -149,13 +119,14 @@ section {
 
 .hero-decoration {
     position: absolute;
-    top: 20px;
-    right: -20px;
+    top: 15px;
+    right: -15px;
     width: 100%;
     height: 100%;
+    border-radius: 50%;
     z-index: 0;
     opacity: 0.7;
-    background-color: var(--bs-secondary); /* Usa a cor secundária */
+    background-color: var(--bs-secondary);
 }
 
 @media (max-width: 991.98px) {
@@ -168,10 +139,6 @@ section {
         top: 10px;
     }
 }
-
-/* =========================================
-   EXPERIÊNCIA E HABILIDADES
-========================================= */
 
 .bg-custom-card {
     background-color: var(--bs-tertiary-bg);
@@ -198,10 +165,6 @@ section {
     color: var(--custom-btn-text) !important;
 }
 
-/* =========================================
-   PROJETOS
-========================================= */
-
 .project-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -210,10 +173,6 @@ section {
     transform: translateY(-5px);
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
 }
-
-/* =========================================
-   FOOTER (CONTATO)
-========================================= */
 
 .footer-btn {
     width: 50px;
@@ -233,44 +192,18 @@ section {
     transform: translateY(-3px);
 }
 
-/* =========================================
-   UTILITÁRIOS DE CORES CUSTOMIZADAS
-========================================= */
-
-/* Verde (Baseado na nossa variável Primary) */
-.border-green { border-color: var(--bs-primary) !important; }
-.text-green { color: var(--bs-primary) !important; }
-
-/* Roxo (Baseado na nossa variável Secondary) */
-.border-purple { border-color: var(--bs-secondary) !important; }
-.text-purple { color: var(--bs-secondary) !important; }
-
-/* A foto em si - Transformando em Círculo com CSS */
-.hero-img {
-    position: relative;
-    z-index: 2;
-    border: 4px solid var(--bs-body-bg);
-    border-radius: 50%; /* Deixa a borda redonda */
-    aspect-ratio: 1 / 1; /* Força a imagem a ter proporção quadrada (1:1) */
-    object-fit: cover; /* Corta o excesso da foto sem amassar o seu rosto */
-    width: 100%;
-    max-width: 320px; /* Limita o tamanho máximo */
-    transition: transform 0.3s ease;
+.border-green {
+    border-color: var(--bs-primary) !important;
 }
 
-.hero-img:hover {
-    transform: translateY(-5px);
+.text-green {
+    color: var(--bs-primary) !important;
 }
 
-/* O fundo decorativo também vira um círculo para acompanhar */
-.hero-decoration {
-    position: absolute;
-    top: 15px; /* Ajustei um pouco a distância */
-    right: -15px;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%; /* Deixa redondo igual a foto */
-    z-index: 0;
-    opacity: 0.7;
-    background-color: var(--bs-secondary);
+.border-purple {
+    border-color: var(--bs-secondary) !important;
+}
+
+.text-purple {
+    color: var(--bs-secondary) !important;
 }
