@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Pessoal | Meu Portfólio (Bulma)</title>
+
+    <!-- Bulma CSS (Versão mais recente) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar is-fixed-top custom-navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item has-text-weight-bold is-size-5" href="#top">
+                    <i class="fa-solid fa-terminal text-primary mr-2"></i>Meu Portfólio
+                </a>
+
+                <!-- Hamburger menu (Mobile) -->
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navMenu" class="navbar-menu has-text-weight-medium">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="#sobre">Sobre</a>
+                    <a class="navbar-item" href="#experiencia">Experiência</a>
+                    <a class="navbar-item" href="#habilidades">Habilidades</a>
+                    <a class="navbar-item" href="#projetos">Projetos</a>
+                    <a class="navbar-item" href="#contato">Contato</a>
+                    
+                    <div class="navbar-item">
+                        <button id="themeToggle" class="button is-rounded btn-theme-toggle" aria-label="Alternar tema">
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main id="top" class="container is-max-widescreen mt-6 pt-5">
+        
+        <!-- Hero / Sobre -->
+        <section id="sobre" class="section border-bottom">
+            <div class="columns is-vcentered is-flex-direction-row-reverse">
+                
+                <!-- Coluna da Foto (Direita no PC, Cima no Mobile) -->
+                <div class="column is-5 has-text-centered">
+                    <div class="hero-image-wrapper mx-auto">
+                        <img src="assets/img/foto.png" alt="Foto de perfil de Ezequiel" class="hero-img shadow-lg">
+                        <div class="hero-decoration"></div>
+                    </div>
+                </div>
+
+                <!-- Coluna de Texto -->
+                <div class="column is-7">
+                    <span class="tag custom-tag-secondary is-rounded mb-4 is-medium">Sistemas de Informação • UFLA</span>
+                    <h1 class="title is-1 mb-4">
+                        Olá, eu sou <span class="text-primary">Ezequiel</span>.
+                    </h1>
+                    <h2 class="subtitle is-4 text-secondary mb-5">
+                        Desenvolvedor de software com foco em backend e estudante do curso de Sistemas de Informação.
+                    </h2>
+                    <p class="mb-5 is-size-6 text-muted">
+                        Atualmente estou no 5° período do curso de Sistemas de Informação na UFLA. Foco meus estudos em habilidades para construir uma carreira em desenvolvimento web. Gosto de criar soluções, resolver problemas, e usar a programação para transformar ideias em realidade.
+                    </p>
+                    
+                    <div class="buttons mt-4">
+                        <a href="#experiencia" class="button custom-btn-primary is-medium">
+                            <i class="fa-solid fa-briefcase mr-2"></i>Minha Trajetória
+                        </a>
+                        <a href="#projetos" class="button custom-btn-outline is-medium">
+                            Ver Projetos
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- JS Customizado -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
